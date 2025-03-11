@@ -16,7 +16,7 @@ export const createFund = async (orderId, recId, id, amount) => {
 }
 
 export const createOrder = async (requestData, hmac) => {
-  axios.defaults.headers.common["Authorization"] = bearerToken;
+  // axios.defaults.headers.common["Authorization"] = bearerToken;
   axios.defaults.headers.common["Sign"] = hmac;
   const response = await axios.post(`${API_URL}/api/payout/create/`, requestData);
   return response;
