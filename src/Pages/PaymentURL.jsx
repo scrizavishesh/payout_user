@@ -25,7 +25,7 @@ const PaymentURl = () => {
             amount: parseFloat(amount),
             bank_name: bankName,
             callback_url: callbackUrl,
-            ifsc: ifsc
+            IFSC: ifsc
         };
         const hmac = CryptoJS.HmacSHA256(JSON.stringify(data), secretKey).toString();
         try {
